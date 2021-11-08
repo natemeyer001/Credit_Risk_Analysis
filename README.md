@@ -3,6 +3,7 @@
 ## Overview
 Use multiple machine learning algorithms to asses credit risk. Then compare the results and recommend an algorithm to use, if any are acceptable.
 
+## Background Info
 The majority of the credit risk data consists of good loans, which makes it an inherently unbalanced dataset, but that can be adjusted for. The first way is to oversample, which selects more instances from the minority class, bad loans, until it is closer (or eqaul) to the majority class. The second approach is to undersample, which selects fewer instances from the majority class until the two classes are balanced. The final approach is a combination of oversampling and undersampling.
 
 ## Results
