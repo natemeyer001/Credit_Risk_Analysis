@@ -33,10 +33,12 @@ The last model was an AdaBoost Classifier and the balanced accuracy score was 0.
 
 
 ## Conclusion
-The accuracy score 
+The accuracy scores from the first four are quite worrisome, with all above 0.5 but the highest at 65.8% accuracy. It got much better with the Ensemble Learners, with AdaBoost having the best balanced accuracy score. 
 
+All of the models had very good precision scores (i.e. how reliable a positive classificaion is) with the lowest being 0.99 for the avg/total. However, the precision of the high_risk was terrible across the board, with the first 4 models having 0.01, and the Ensemble Learners at 0.03 and 0.05 for Random Forest and AdaBoost respectively. The window dressing of the overall scores are appealing, but when you look closer, you see that the foundation is not sturdy with the tiny precision of high-risk showing that the models have lots of false postives.
 
+The recall was all over the place with the first 4 models' avg/total, with values of 0.57, 0.68, 0.40, 0.54. These can be interpreted as finding between 40% and 68% of all of the positive samples. Ideally it would be closer to 1 and the models would not miss out on any good loan opportunities. Once again the Ensemble Learners performed the best, with recall scores of 0.87 and 0.90 for Random Forest and AdaBoost respectively. However, the high risk recall was 0.70 for Random Forest, compared to 0.93 for the AdaBoost.
 
+F1 scores are weighted averages of the recall and precision, so it is no surprise that AdaBoost had the best performance with 0.94 avg/total. Close behind was Random Forest with 0.93, and in third was SMOTE with 0.81. The low-risk f1 scores were all above the avg/total, and the high-risk f1 scores were all 0.10 or lower.
 
-
-
+Overall, the Ensemble Learners outperformed the over/under samplers, but the numbers were buoyed by the models' performances of the high-risk loans. The best F1 score for the high-risk was only 0.10, which is terrible. As such, I would recommend more research on more advanced models that do a better job of identifying the bad risk. For the time being, the AdaBoost model performs well overall, but needs some additional verification on high-risk instances. 
